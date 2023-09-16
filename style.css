@@ -1,0 +1,106 @@
+
+.body{
+    display: flex;
+    justify-content: flex-start;
+  
+  }
+  
+  .sidebar{
+    text-align: right;
+    margin-left: 25%;
+    padding-top: 105px;
+    padding-right: 30px;
+    padding-left: 0px;
+    white-space: nowrap;
+    font-size: 18px;
+  }
+  
+  .main{
+    font-size: 18px;
+    padding-right: 25%;
+    padding-top: 80px;
+    
+  }
+  
+  a:visited {
+    color: blue; 
+  }
+  
+  .main p {
+    font-size: 18px; 
+  }
+  
+  .main .project p {
+  margin-top: 0px;
+  margin-bottom: 35px;
+  line-height: 24px;
+  
+  }
+  
+  .main .project h4 {
+  margin-bottom: 7px;
+  }
+  
+  .custom-link {
+    text-decoration: underline;
+    color: inherit; /* This inherits the color from the parent element */
+  }
+  
+  h4 a.custom-link:hover {
+    color: blue;
+  }
+  
+  
+  .custom-link:visited {
+    color: inherit; /* Ensures the color stays the same on hover and visited states */
+  }
+  
+  
+  .video-preview {
+    width: 560px; /* Adjust the width as needed */
+    height: 315px; /* Adjust the height as needed */
+    background-image: url(https://img.youtube.com/vi/u3QfLK0fWBg/maxresdefault.jpg); /* Replace with the URL of the thumbnail image */
+    background-size: cover;
+    position: relative;
+  }
+  
+  
+  .printer-pics2 {
+    display: flex; 
+    justify-content: flex-start;
+    gap: 20px; 
+    margin-bottom: 20px;
+    align-items: flex-start; 
+  }
+  
+  .dorm {
+    display: flex; 
+    justify-content: flex-start;
+    gap: 20px; 
+    margin-bottom: 20px;
+  }
+  
+  video {
+    width: 100%;
+    max-width: 580px; 
+    height: auto;
+    display: block; 
+  
+  }
+  
+  
+  .yc {
+    display: flex; 
+    justify-content: flex-start;
+    gap: 20px; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-items: center;
+  }
+  
+  .hot {
+    display: flex; 
+    gap: 10px;
+    margin-bottom: 10px;
+    
+  }
