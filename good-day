@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Rana's Personal Website test test --> 
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <title>Engineering a Good Day | Rana Banankhah</title>
+    <link rel="icon" href="./assets/favicon-16x16.png" type="image/x-icon" sizes="16x16">
+    <link rel="icon" href="./assets/favicon-32x32.png" type="image/png" sizes="32x32">
+  </head>
+
+  <body class="body">
+    <div class="sidebar">
+      <a href=/>About</a> 
+      <br>
+      <a href="projects.html">Projects</a>
+      <br>
+      <a href="writing.html">Writing</a>
+      <br>
+      <a href="https://www.goodreads.com/ranaba" target=”_blank”>Bookshelf</a>
+    </div>
+        
+
+    <div class="main">
+
+      <h2>How to Engineer a Good Day</h2>
+
+      <p>You know those people who<b><em>always</em></b> seem to be having a great day? The ones who you’ve <em>never</em> seen upset, stressed, or tired. The ones whose brains seem like they’re powered by an infinite supply of sunshine, rainbows, sparkles, and glitter. 
+    </p>
+    <p>I’ve always wondered how they do it. Even though I realize that <em>always</em> being <em>that</em> happy is an unrealistic goal, I’ve found a few strategies that consistently work to optimize for a good day. 
+    </p>
+    <p>The secret? Priming your brain in the morning. </p>
+    <ul>
+        <li>Get a good night’s sleep (very important). 
+        </li>
+        <li>Wake up and listen to “Another Day Of Sun.” Game-changing. 
+        </li>
+        <li>Positive mindset (most important): 
+            <ul>
+                <li>Think about everything you’re grateful for. 
+                </li>
+                <li>Know there’s no problem you can’t get through. 
+                </li>
+                <li>Remember <a href="https://medium.com/finn-jackson/the-parable-of-the-taoist-farmer-8f52bba7f12c" target=”_blank”>this story.</a> 
+                </li>
+                <li>Advice Aloe Blacc shared with me: Don't sweat the small stuff. 
+                </li>
+            </ul>
+        </li>
+        <li>Exercise and/or meditate. </li>
+        <li>Cold shower. 
+        </li>
+        <li>Stay hydrated. 
+        </li>
+        <li>If all else fails: take vitamin B. 
+        </li>
+    </ul>
+ 
+
+    </div>
+    
+
+  </body>
+</html> 
