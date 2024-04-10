@@ -48,7 +48,6 @@
       updateTimerDisplay(timeLeft);
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
-        audioPlayer.pause();
         showPasscodeForm();
       }
     }, 1000);
@@ -64,6 +63,7 @@
   // Function to show the passcode form and stop the timer
   function showPasscodeForm() {
     clearInterval(timerInterval);
+    audioPlayer.pause();
     passcodeForm.style.display = 'block';
   }
 
@@ -75,9 +75,6 @@
     event.preventDefault();
     const passcode = passcodeInput.value;
     if (passcode === '1234') { // Change 'your-passcode' to your actual passcode
-      clearInterval(timerInterval);
-      audioPlayer.pause();
-      goButton.disabled = false; // Enable the GO button
       passcodeForm.style.display = 'none'; // Hide the passcode form
       congratsMessage.style.display = 'block'; // Show the congrats message
     } else {
