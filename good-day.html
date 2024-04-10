@@ -1,96 +1,66 @@
 <!DOCTYPE html>
+<!-- Rana's Personal Website test test --> 
+
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Design 1 Escape Room: Group 2</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
-  #passcodeInput {
-    margin-top: 20px;
-    padding: 5px;
-    font-size: 16px;
-  }
-  #goButton {
-    margin-bottom: 10px;
-    background-color: green;
-    color: white;
-    width: 150px;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-</style>
-</head>
-<body>
-<button id="goButton">GO</button>
-<input type="text" id="passcodeInput" placeholder="Enter passcode">
-<audio id="audioPlayer" src="assets/Panic Alarm Sound Effect.mp3" loop></audio>
-<h1>THE COPS ARE COMING!!!</h1>
-<p>This page will play an MP3 file when you press the "GO" button and starts a timer that counts down from 12 minutes.</p>
-<div id="timer">12:00</div>
-<p id="congratsMessage" style="display: none;">Congratulations, you've escaped!</p>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <title>Engineering a Good Day | Rana Banankhah</title>
+    <link rel="icon" href="./assets/favicon-16x16.png" type="image/x-icon" sizes="16x16">
+    <link rel="icon" href="./assets/favicon-32x32.png" type="image/png" sizes="32x32">
+  </head>
 
-<script>
-  let audioPlayer = document.getElementById('audioPlayer');
-  let timerDisplay = document.getElementById('timer');
-  let goButton = document.getElementById('goButton');
-  let passcodeInput = document.getElementById('passcodeInput');
-  let congratsMessage = document.getElementById('congratsMessage');
-  let timerInterval;
+  <body class="body">
+    <div class="sidebar">
+      <a href=/>About</a> 
+      <br>
+      <a href="projects.html">Projects</a>
+      <br>
+      <a href="writing.html">Writing</a>
+      <br>
+      <a href="https://www.goodreads.com/ranaba" target=”_blank”>Bookshelf</a>
+    </div>
+        
 
-  // Function to start the audio and timer
-  function startAudioAndTimer() {
-    audioPlayer.play();
-    goButton.disabled = true; // Disable the GO button after pressing
-    let timeLeft = 12 * 60; // 12 minutes in seconds
-    updateTimerDisplay(timeLeft);
-    timerInterval = setInterval(function() {
-      timeLeft--;
-      updateTimerDisplay(timeLeft);
-      if (timeLeft <= 0) {
-        clearInterval(timerInterval);
-        showPasscodeInput();
-      }
-    }, 1000);
-  }
+    <div class="main">
 
-  // Function to update the timer display
-  function updateTimerDisplay(timeLeft) {
-    let minutes = Math.floor(timeLeft / 60);
-    let seconds = timeLeft % 60;
-    timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-  }
+      <h2>How to Engineer a Good Day</h2>
 
-  // Function to show the passcode input field and stop the timer and audio
-  function showPasscodeInput() {
-    clearInterval(timerInterval);
-    audioPlayer.pause();
-    passcodeInput.style.display = 'block';
-    passcodeInput.focus();
-  }
+      <p>You know those people who <b><em>always</em></b> seem to be having a great day? The ones you’ve <em>never</em> seen upset, stressed, or tired. People whose brains seem like they’re powered by an infinite supply of sunshine, rainbows, sparkles, and glitter. 
+    </p>
+    <p>I’ve always wondered how they do it. While I realize that <em>always</em> being <em>that</em> happy is an unrealistic goal, I’ve found a few strategies that consistently work to optimize for a good day. 
+    </p>
+vis
+    <p>Here's my running list:</p>
+    <ul>
+        <li>Get a good night’s sleep (very important). 
+        </li>
+        <li>Wake up and listen to “Another Day Of Sun.” Game-changing. 
+        </li>
+        <li>Positive mindset (most important): 
+            <ul>
+                <li>Think about everything you’re grateful for. 
+                </li>
+                <li>Know there’s no problem you can’t get through. 
+                </li>
+                <li>Remember <a href="https://medium.com/finn-jackson/the-parable-of-the-taoist-farmer-8f52bba7f12c" target=”_blank”>this story.</a> 
+                </li>
+                <li>Don't sweat the small stuff. 
+                </li>
+            </ul>
+        </li>
+        <li>Exercise and/or meditate. </li>
+        <li>Cold shower. 
+        </li>
+        <li>Stay hydrated. 
+        </li>
+        <li>If all else fails: take vitamin B. 
+        </li>
+    </ul>
+ 
 
-  // Event listener for the GO button click
-  goButton.addEventListener('click', startAudioAndTimer);
+    </div>
+    
 
-  // Event listener for the passcode input
-  passcodeInput.addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-      const passcode = passcodeInput.value;
-      if (passcode === '1234') { // Change 'your-passcode' to your actual passcode
-        clearInterval(timerInterval); // Pause the timer
-        audioPlayer.pause(); // Pause the audio
-        congratsMessage.style.display = 'block'; // Show the congrats message
-      } else {
-        alert('Incorrect passcode. Please try again.');
-      }
-    }
-  });
-</script>
-</body>
-</html>
+  </body>
+</html> 
