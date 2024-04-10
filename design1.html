@@ -86,7 +86,7 @@
   passcodeInput.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
       const passcode = passcodeInput.value;
-      if (passcode === '1234') { // Change 'your-passcode' to your actual passcode
+      if (passcode === 'green') { // Change 'your-passcode' to your actual passcode
         clearInterval(timerInterval); // Pause the timer
         audioPlayer.pause(); // Pause the audio
         congratsMessage.style.display = 'block'; // Show the congrats message
