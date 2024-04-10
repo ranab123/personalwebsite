@@ -18,7 +18,7 @@
 </head>
 <body>
 <audio id="audioPlayer" src="assets/Panic Alarm Sound Effect.mp3" loop></audio>
-<h1> Escape Room </h1>
+<h1>Welcome to the Escape Room MP3 Player with Timer</h1>
 <p>This page will play an MP3 file when you press the "GO" button and starts a timer that counts down from 12 minutes.</p>
 <div id="timer">12:00</div>
 <input type="text" id="passcodeInput" placeholder="Enter passcode">
@@ -72,6 +72,8 @@
     if (event.key === 'Enter') {
       const passcode = passcodeInput.value;
       if (passcode === '1234') { // Change 'your-passcode' to your actual passcode
+        clearInterval(timerInterval); // Pause the timer
+        audioPlayer.pause(); // Pause the audio
         congratsMessage.style.display = 'block'; // Show the congrats message
       } else {
         alert('Incorrect passcode. Please try again.');
