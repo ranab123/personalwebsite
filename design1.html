@@ -18,22 +18,17 @@
 </head>
 <body>
 <audio id="audioPlayer" src="assets/Panic Alarm Sound Effect.mp3" loop></audio>
-<h1>Welcome to the Escape Room MP3 Player with Timer</h1>
+<h1> Escape Room </h1>
 <p>This page will play an MP3 file when you press the "GO" button and starts a timer that counts down from 12 minutes.</p>
-<button id="goButton">GO</button>
 <div id="timer">12:00</div>
-<form id="passcodeForm" style="display: none;">
-  <label for="passcodeInput">Enter passcode:</label>
-  <input type="password" id="passcodeInput" name="passcodeInput" placeholder="Enter passcode">
-  <input type="submit" value="Submit">
-</form>
+<input type="text" id="passcodeInput" placeholder="Enter passcode">
+<button id="goButton">GO</button>
 <p id="congratsMessage" style="display: none;">Congratulations, you've escaped!</p>
 
 <script>
   let audioPlayer = document.getElementById('audioPlayer');
   let timerDisplay = document.getElementById('timer');
   let goButton = document.getElementById('goButton');
-  let passcodeForm = document.getElementById('passcodeForm');
   let passcodeInput = document.getElementById('passcodeInput');
   let congratsMessage = document.getElementById('congratsMessage');
   let timerInterval;
@@ -49,7 +44,7 @@
       updateTimerDisplay(timeLeft);
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
-        showPasscodeForm();
+        showPasscodeInput();
       }
     }, 1000);
   }
@@ -61,25 +56,26 @@
     timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   }
 
-  // Function to show the passcode form and stop the timer
-  function showPasscodeForm() {
+  // Function to show the passcode input field and stop the timer and audio
+  function showPasscodeInput() {
     clearInterval(timerInterval);
     audioPlayer.pause();
-    passcodeForm.style.display = 'block';
+    passcodeInput.style.display = 'block';
+    passcodeInput.focus();
   }
 
   // Event listener for the GO button click
   goButton.addEventListener('click', startAudioAndTimer);
 
-  // Event listener for the passcode form submission
-  passcodeForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const passcode = passcodeInput.value;
-    if (passcode === '1234') { // Change 'your-passcode' to your actual passcode
-      passcodeForm.style.display = 'none'; // Hide the passcode form
-      congratsMessage.style.display = 'block'; // Show the congrats message
-    } else {
-      alert('Incorrect passcode. Please try again.');
+  // Event listener for the passcode input
+  passcodeInput.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+      const passcode = passcodeInput.value;
+      if (passcode === '1234') { // Change 'your-passcode' to your actual passcode
+        congratsMessage.style.display = 'block'; // Show the congrats message
+      } else {
+        alert('Incorrect passcode. Please try again.');
+      }
     }
   });
 </script>
